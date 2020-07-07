@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jbk-sy-LIk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gif Search View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GifSearchViewController" customModule="TestGif" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DxX-x3-N3D">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DxX-x3-N3D" secondAttribute="bottom" id="EMP-hs-ZpB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DxX-x3-N3D" secondAttribute="trailing" id="jan-f5-20c"/>
+                            <constraint firstItem="DxX-x3-N3D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="u6s-KG-hr2"/>
+                            <constraint firstItem="DxX-x3-N3D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vPy-ia-TwW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YnC-sW-vuD"/>
+                    <connections>
+                        <outlet property="tableView" destination="DxX-x3-N3D" id="3S4-uU-wIu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
+        </scene>
+        <!--Gif Detail View Controller-->
+        <scene sceneID="umL-5y-jDt">
+            <objects>
+                <viewController storyboardIdentifier="FullGifViewController" id="thj-R3-of8" customClass="GifDetailViewController" customModule="TestGif" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aUI-a8-eFp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GLi-MW-8fH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="433"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GLi-MW-8fH" secondAttribute="height" multiplier="414:433" id="MH6-TM-gT5"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GLi-MW-8fH" firstAttribute="top" secondItem="U9e-yo-lvF" secondAttribute="top" id="MYJ-FT-hPY"/>
+                            <constraint firstItem="GLi-MW-8fH" firstAttribute="leading" secondItem="U9e-yo-lvF" secondAttribute="leading" id="XcG-WO-tlf"/>
+                            <constraint firstItem="GLi-MW-8fH" firstAttribute="trailing" secondItem="U9e-yo-lvF" secondAttribute="trailing" id="bRQ-qU-CZ1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="U9e-yo-lvF"/>
+                    </view>
+                    <connections>
+                        <outlet property="gifImageView" destination="GLi-MW-8fH" id="iOY-I7-2R6"/>
+                        <outlet property="gifImageViewAspectRatioContraint" destination="MH6-TM-gT5" id="gRM-mD-Ojg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eie-Go-0xl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1939.1304347826087" y="142.63392857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zTJ-0o-3Aa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jbk-sy-LIk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7SN-LY-xjA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ves-db-gx5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQZ-qy-xgv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
